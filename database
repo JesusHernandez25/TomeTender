@@ -1,0 +1,109 @@
+
+GO
+-- Use the newly created database
+USE NEWLibraryDatabase;
+
+-- Create Category table
+CREATE TABLE Genre (
+    genre_id INT PRIMARY KEY IDENTITY(1,1),
+    genre_name VARCHAR(50) NOT NULL
+);
+
+-- Insert sample data into the Category table
+INSERT INTO Genre(Genre_name)
+VALUES
+    ('Science Fiction'),
+    ('Mystery'),
+    ('Romance'),
+    ('Thriller'),
+    ('Fantasy'),
+    ('Historical Fiction');
+    -- Add more categories as needed
+
+-- Create Book table
+CREATE TABLE Book (
+    book_id INT PRIMARY KEY IDENTITY(1,1),
+    title VARCHAR(100) NOT NULL,
+    category_id INT FOREIGN KEY REFERENCES Category(category_id)
+);
+
+-- Insert sample data into the Book table
+INSERT INTO Book (title, category_id)
+VALUES
+    ('The Time Machine', 1),
+    ('The Hound of the Baskervilles', 2),
+    ('Pride and Prejudice', 3),
+    ('The Da Vinci Code', 4),
+    ('Harry Potter and the Sorcerer''s Stone', 5);
+    -- Add more books as needed
+
+-- Create Publisher table
+CREATE TABLE Publisher (
+    publisher_id INT PRIMARY KEY IDENTITY(1,1),
+    name VARCHAR(100) NOT NULL
+);
+
+-- Insert sample data into the Publisher table
+INSERT INTO Publisher (name)
+VALUES
+    ('Penguin Books'),
+    ('HarperCollins'),
+    ('Random House'),
+    ('Simon & Schuster'),
+    ('Macmillan');
+    -- Add more publishers as needed
+
+-- Create BookInfo table
+CREATE TABLE BookInfo (
+    info_id INT PRIMARY KEY IDENTITY(1,1),
+    book_id INT FOREIGN KEY REFERENCES Book(book_id),
+    library_id INT,
+    book_number INT,
+    publisher_id INT FOREIGN KEY REFERENCES Publisher(publisher_id),
+    year_published INT
+);
+
+-- Insert sample data into the BookInfo table
+INSERT INTO BookInfo (book_id, library_id, book_number, publisher_id, year_published)
+VALUES
+    (1, 101, 001, 1, 1895),
+    (2, 102, 002, 2, 1902),
+    (3, 103, 003, 3, 1813),
+    (4, 104, 004, 4, 2003),
+    (5, 105, 005, 5, 1997);
+    -- Add more book info as needed
+
+-- Create BookAuthor table
+CREATE TABLE BookAuthor (
+    book_id INT FOREIGN KEY REFERENCES Book(book_id),
+    author_id INT FOREIGN KEY REFERENCES Author(author_id),
+    PRIMARY KEY (book_id, author_id)
+);
+
+-- Insert sample data into the BookAuthor table
+INSERT INTO BookAuthor (book_id, author_id)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5);
+    -- Add more book-author relationships as needed
+
+-- Create Author table
+CREATE TABLE Author (
+    author_id INT PRIMARY KEY IDENTITY(1,1),
+    author_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE,
+    date_of_death DATE
+);
+
+-- Insert sample data into the Author table
+INSERT INTO Author (author_name, date_of_birth, date_of_death)
+VALUES
+    ('H.G. Wells', '1866-09-21', '1946-08-13'),
+    ('Arthur Conan Doyle', '1859-05-22', '1930-07-07'),
+    ('Jane Austen', '1775-12-16', '1817-07-18'),
+    ('Dan Brown', '1964-06-22', NULL),
+    ('J.K. Rowling', '1965-07-31', NULL);
+    -- Add more authors as needed
