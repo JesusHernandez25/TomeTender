@@ -107,3 +107,99 @@ VALUES
     ('Dan Brown', '1964-06-22', NULL),
     ('J.K. Rowling', '1965-07-31', NULL);
     -- Add more authors as needed
+
+-- Create Library table
+CREATE TABLE Library (
+    library_id INT PRIMARY KEY IDENTITY(1,1),
+    library_name,
+    address,
+    city_id INT FOREIGN KEY REFERENCES City(city_id)
+);
+
+-- Insert sample data into the Library table
+INSERT INTO Library (library_id, library_name, address, city_id)
+VALUES
+    ('101', 'Reading Oasis', '789 Elm Street' '11'),
+    ('102', 'Silent Stacks Society', '456 Oak Avenue' '12'),
+    ('103', 'Bookworm Retreat', '789 Maple Lane' '13'),
+    ('104', 'Wisdom Vault', '321 Pine Street' '14'),
+    ('105', 'Literary Haven Library', '876 Birch Road' '15');
+    -- Add more Libraries as needed
+-- Create City table
+CREATE TABLE City (
+    city_id INT PRIMARY KEY IDENTITY(1,1),
+    post_code,
+    city_name
+);
+
+--Insert sample data into the City table
+INSERT INTO City (city_id, post_code, city-name)
+VALUES
+    ('11', '45678', 'Harbor City'),
+    ('12', '56789', 'Smallville, CA'),
+    ('13', '89012', 'Rivertown, NY'),
+    ('14', '34567', 'Mountainview, TX'),
+    ('15', '67890', 'Lakeside, FL');
+    -- Add more Cities as needed
+
+-- Create User Account table
+CREATE TABLE User Account (
+    account_id INT PRIMARY KEY IDENTITY(1,1),
+    name,
+    surname,
+    address,
+    city-id INT FOREIGN KEY REFERENCES City(city_id),
+    email_address,
+    phone_number
+);
+
+--INSERT sample data into the User Account table
+INSERT INTO User Account (account_id, name, surname, address, city-id, email_address, phone_number)
+VALUES
+    ('1001', 'Liam', 'Thompson', '456 Pine Street', '14', 'LiamThompson@gmail.com', '8392382948'),
+    ('1002', 'Emily', 'Turner', '789 Birch Road', '15', 'Emily789@gmail.com', '8329237482'),
+    ('1003', 'Mason', 'Reynolds', '234 Cedar Boulevard', '12', 'Masondagoat@yahoo.com', '3488248823'),
+    ('1004', 'Lucas', 'Mitchell', '567 Elm Street', '11', 'Lucasskywalker@aol.om', '2803827492'),
+    ('1005', 'Kim', 'Thompson', '901 Redwood Lane', '13', 'MsThompson@yahoo.com', '3231237364');
+    -- Add more User Accounts as needed
+
+-- Create Loaned Book table
+CREATE TABLE Loaned Book (
+    loaned_id INT PRIMARY KEY IDENTITY(1,1),
+    book_id INT FOREIGN KEY REFERENCES Book(book_id),
+    account_id INT FOREIGN KEY REFERENCES User Account(account_id),
+    date_lent,
+    date_due,
+    date_returned,
+    overdue_fine,
+    loaned_status_id,
+    timestamp
+);
+
+--INSERT sample data into the Loaned Book table
+INSERT INTO Loaned Book (loaned_id, book_id, account_id, date_lent, date_due, date_returned, overdue_fine, loaned_status_id, timestamp)
+VALUES
+    ('298322', '1', '1001', '3/23/2023', '4/23/2023', '4/11/2023', '$0', '2384', ''),
+    ('212389', '2', '1002', '1/05/2023', '1/19/2023', '2/20/2022', '$5', '2334', ''),
+    ('592932', '3', '1003', '5/25/2023', '6/09/2023', 'null', '$35', '2433', ''),
+    ('324083', '4', '1004', '6/10/2023', '6/24/2023', '6/24/2023', '$0', '3223', ''),
+    ('214084', '5', '1005', '3/08/2020', '4/08/2020', '5/10/2023', '$50', '1022', '');
+    -- Add more Loaned Books as needed
+-- Create Loaned Status table
+CREATE TABLE Loaned Status (
+    loan_id INT FOREIGN KEY REFERENCES Loaned Book(loan_id),
+    status
+);
+
+--INSERT sample data into the Loaned Status table
+INSERT INTO Loaned Status (loan_id, status)
+VALUES
+    ('298322', 'Returned'),
+    ('212389', 'Returned'),
+    ('592932', 'Overdued'),
+    ('324083', 'Returned'),
+    ('214084', 'Returned');
+    -- Add more Loaned Status as needed
+
+
+
