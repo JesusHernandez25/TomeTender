@@ -58,21 +58,67 @@ VALUES
 CREATE TABLE BookInfo (
     info_id INT PRIMARY KEY IDENTITY(1,1),
     book_id INT FOREIGN KEY REFERENCES Book(book_id),
-    library_id INT,
-    book_number INT,
     publisher_id INT FOREIGN KEY REFERENCES Publisher(publisher_id),
-    year_published INT
+    year_published INT,
+	Summary VARCHAR(255)
+);
+-- Insert sample data into the BookInfo table
+-- Will need to be tested
+INSERT INTO BookInfo (book_id,  publisher_id, year_published, Summary)
+VALUES
+    (1, 1, 1895, 3),
+    (2, 2, 1902, 3),
+    (3, 3, 1813, 3),
+    (4, 4, 2003, 3),
+    (5, 5, 1997, 3);
+    -- Add more book info as needed
+	
+--New tables
+
+-- Create Library_Event Table
+CREATE TABLE Library_Event (
+    Library_Event_ID INT PRIMARY KEY IDENTITY(1,1),
+    Event_Description VARCHAR(100) NOT NULL
 );
 
--- Insert sample data into the BookInfo table
-INSERT INTO BookInfo (book_id, library_id, book_number, publisher_id, year_published)
+	SET IDENTITY_INSERT Library_Event ON
+
+INSERT INTO Library_Event (Library_Event_ID, Event_Description)
 VALUES
-    (1, 101, 001, 1, 1895),
-    (2, 102, 002, 2, 1902),
-    (3, 103, 003, 3, 1813),
-    (4, 104, 004, 4, 2003),
-    (5, 105, 005, 5, 1997);
-    -- Add more book info as needed
+	(1, 'Party'),
+	(2, 'Holiday');
+
+	SET IDENTITY_INSERT Library_Event OFF
+
+-- Create Reading_List Table
+CREATE TABLE Reading_List (
+    Reading_List_ID INT PRIMARY KEY IDENTITY(1,1),
+	Book_Info_ID int FOREIGN KEY REFERENCES BookInfo(Info_ID)
+);
+
+	SET IDENTITY_INSERT Reading_List ON
+
+INSERT INTO Reading_List (Reading_List_ID, Book_Info_ID)
+VALUES
+	(1, 1),
+	(2, 2);
+
+	SET IDENTITY_INSERT Reading_List OFF
+
+-- Create Wishlist Table
+CREATE TABLE Wishlist (
+    Wishlist_ID INT PRIMARY KEY IDENTITY(1,1),
+	Book_Info_ID int FOREIGN KEY REFERENCES BookInfo(Info_ID)
+);
+
+	SET IDENTITY_INSERT Wishlist ON
+
+INSERT INTO Wishlist (Wishlist_ID, Book_Info_ID)
+VALUES
+	(1, 1),
+	(2, 2);
+
+	SET IDENTITY_INSERT Wishlist OFF
 
 -- Create Author table
 CREATE TABLE Author (
@@ -131,21 +177,29 @@ CREATE TABLE Libraries (
     library_id INT PRIMARY KEY IDENTITY(1,1),
     library_name VARCHAR(100),
     library_address VARCHAR (100),
-    city_id INT FOREIGN KEY REFERENCES City(city_id)
+    city_id INT FOREIGN KEY REFERENCES City(city_id),
+	Library_Event_ID INT FOREIGN KEY REFERENCES Library_Event(Library_Event_ID)
 );
 
 -- Insert sample data into the Library table
-INSERT INTO Libraries (library_name, library_address, city_id)
+INSERT INTO Libraries (library_name, library_address, city_id, Library_Event_ID)
 VALUES
-    ('Reading Oasis', '789 Elm Street', '1'),
-    ('Silent Stacks Society', '456 Oak Avenue', '2'),
-    ('Bookworm Retreat', '789 Maple Lane', '3'),
-    ('Wisdom Vault', '321 Pine Street', '4'),
-    ('Literary Haven Library', '876 Birch Road', '5');
-    -- Add more Libraries as needed
+    ('Reading Oasis', '789 Elm Street', '1','1'),
+    ('Silent Stacks Society', '456 Oak Avenue', '2','2'),
+    ('Bookworm Retreat', '789 Maple Lane', '3','1'),
+    ('Wisdom Vault', '321 Pine Street', '4','2'),
+    ('Literary Haven Library', '876 Birch Road', '5','1');
 
+	--New tables
+-- Create Book_Location Table
+CREATE TABLE Book_Location (
+    info_id INT FOREIGN KEY REFERENCES BookInfo(info_id),
+    library_ID INT FOREIGN KEY REFERENCES Libraries(Library_ID),
+    PRIMARY KEY (info_ID, Library_ID),
+	Book_Amount INT
+);
 
--- Create UserAccount table
+	-- Create UserAccount table
 CREATE TABLE UserAccount (
     account_id INT PRIMARY KEY IDENTITY(1,1),
     username VARCHAR(100),
@@ -153,19 +207,21 @@ CREATE TABLE UserAccount (
     user_address VARCHAR(100),
     city_id INT FOREIGN KEY REFERENCES City(city_id),
     email_address VARCHAR(100),
-    phone_number VARCHAR(20)
+    phone_number VARCHAR(20),
+	Wishlist_ID INT FOREIGN KEY REFERENCES Wishlist(Wishlist_ID),
+	Reading_List_ID INT FOREIGN KEY REFERENCES Reading_List(Reading_List_ID)
 );
 
 --INSERT sample data into the UserAccount table
-INSERT INTO UserAccount (username, surname, user_address, city_id, email_address, phone_number)
+INSERT INTO UserAccount (username, surname, user_address, city_id, email_address, phone_number, Wishlist_ID, Reading_List_ID)
 VALUES
-    ('Liam', 'Thompson', '456 Pine Street', '1', 'LiamThompson@gmail.com', '8392382948'),
-    ('Emily', 'Turner', '789 Birch Road', '2', 'Emily789@gmail.com', '8329237482'),
-    ('Mason', 'Reynolds', '234 Cedar Boulevard', '3', 'Masondagoat@yahoo.com', '3488248823'),
-    ('Lucas', 'Mitchell', '567 Elm Street', '4', 'Lucasskywalker@aol.om', '2803827492'),
-    ('Kim', 'Thompson', '901 Redwood Lane', '5', 'MsThompson@yahoo.com', '3231237364');
+    ('Liam', 'Thompson', '456 Pine Street', '1', 'LiamThompson@gmail.com', '8392382948', '1', '1'),
+    ('Emily', 'Turner', '789 Birch Road', '2', 'Emily789@gmail.com', '8329237482', '2', '2'),
+    ('Mason', 'Reynolds', '234 Cedar Boulevard', '3', 'Masondagoat@yahoo.com', '3488248823', '2', '2'),
+    ('Lucas', 'Mitchell', '567 Elm Street', '4', 'Lucasskywalker@aol.om', '2803827492', '2', '1'),
+    ('Kim', 'Thompson', '901 Redwood Lane', '5', 'MsThompson@yahoo.com', '3231237364', '2', '1');
     -- Add more User Accounts as needed
-
+	
 -- Create LoanedBook table
 CREATE TABLE LoanedBook (
     loan_id INT PRIMARY KEY IDENTITY(1,1),
