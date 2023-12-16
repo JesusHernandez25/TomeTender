@@ -205,48 +205,31 @@ VALUES
     ('5', 'Returned');
     -- Add more LoanedStatus as needed
 
+-- Create the roles
+CREATE ROLE Librarian;
+CREATE ROLE Administrator;
+CREATE ROLE AccountUser;
 
--- Create Roles table
+-- Grant permissions to the Librarian role
+GRANT SELECT, INSERT, UPDATE, DELETE ON Books TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON AccountUsers TO Librarian;
+GRANT SELECT, INSERT, UPDATE ON Transactions TO Librarian;
 
-CREATE TABLE Roles (
-    RoleID INT PRIMARY KEY,
-    RoleName VARCHAR(50) NOT NULL
-);
+-- Grant permissions to the Administrator role
+GRANT SELECT, INSERT, UPDATE, DELETE ON Books TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Members TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Transactions TO Administrator;
 
--- Create Permissions table
-CREATE TABLE Permissions (
-    PermissionID INT PRIMARY KEY,
-    PermissionName VARCHAR(50) NOT NULL
-);
+-- Grant permissions to the AccountUser role
+GRANT SELECT ON Books TO AccountUser;
+GRANT SELECT ON Transactions TO LibraryUser;
 
--- Create RolePermissions junction table
-CREATE TABLE RolePermissions (
-    RoleID INT,
-    PermissionID INT,
-    PRIMARY KEY (RoleID, PermissionID),
-    FOREIGN KEY (RoleID) REFERENCES Roles(RoleID),
-    FOREIGN KEY (PermissionID) REFERENCES Permissions(PermissionID)
-);
+-- Optionally, grant additional permissions as needed
 
--- Insert sample data into Roles table
-INSERT INTO Roles (RoleID, RoleName) VALUES
-(1, 'Administrator'),
-(2, 'UserAccount'),
-(3, 'Librarian');
+-- Assign roles to users
+-- Replace 'username' with the actual usernames of your Librarian, Administrator, and AccountUser
+GRANT Librarian TO Gerg,Thomas;
+GRANT Administrator TO Destiny,Bannks;
+GRANT AccountUser TO Rodney,Stewart;
 
--- Insert sample data into Permissions table
-INSERT INTO Permissions (PermissionID, PermissionName) VALUES
-(1, 'Read Data'),
-(2, 'Write Data'),
-(3, 'Delete Data');
-
--- Assign permissions to roles in the RolePermissions table
-INSERT INTO RolePermissions (RoleID, PermissionID) VALUES
-(1, 1), -- Administrator has Read Data permission
-(1, 2), -- Administrator has Write Data permission
-(1, 3), -- Administrator has Delete Data permission
-(2, 1), -- UserAccount has Read Data permission
-(3, 2), -- Librarian has Write Data permission
-(3, 3); -- Librarian has Delete Data permission
-
-
+-- Add more roles to Assign Roles as needed
