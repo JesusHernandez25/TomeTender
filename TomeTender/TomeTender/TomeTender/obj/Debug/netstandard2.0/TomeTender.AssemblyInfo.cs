@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TomeTender")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac83022f14d5ae4da60ebcf5cbea4597bee8052c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TomeTender")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TomeTender")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
