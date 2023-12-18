@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="True"
+             x:Class="BookAvailability.MainPage">
+
+
+    <StackLayout>
+
+        <!-- Home Button -->
+        <Button Text="Home" Clicked="OnHomeClicked" 
+                HorizontalOptions="Start" VerticalOptions="Start"
+                WidthRequest="70" HeightRequest="50" Margin="10,10,0,0" />
+
+        <!-- Back Button 
+
+            <Label Text="Book Title" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0,20,0,20"/>
+        -->
+        <!-- Library 1 -->
+        <Label Text="Library 1" FontSize="Subtitle"/>
+        <ListView x:Name="Library1ListView" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Library 2 -->
+        <Label Text="Library 2" FontSize="Subtitle"/>
+        <ListView x:Name="Library2ListView" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Library 3 -->
+        <Label Text="Library Name" FontSize="Subtitle"/>
+        <ListView x:Name="Library3ListView" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Back" Clicked="OnBackClicked" />
+    </StackLayout>
+
+</ContentPage>
+

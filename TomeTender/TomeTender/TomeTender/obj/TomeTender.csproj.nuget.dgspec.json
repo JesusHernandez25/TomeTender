@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Downloads\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj": {}
+    "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj": {}
   },
   "projects": {
-    "E:\\Downloads\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj": {
+    "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Downloads\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
+        "projectUniqueName": "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
         "projectName": "TomeTender",
-        "projectPath": "E:\\Downloads\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
-        "packagesPath": "C:\\Users\\mists\\.nuget\\packages\\",
-        "outputPath": "E:\\Downloads\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\obj\\",
+        "projectPath": "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
+        "packagesPath": "C:\\Users\\zamos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mists\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zamos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -71,7 +71,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
