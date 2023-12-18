@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = TomeTender
-build_property.ProjectDir = E:\Downloads\TomeTender\TomeTender\TomeTender\TomeTender\
+build_property.ProjectDir = C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
