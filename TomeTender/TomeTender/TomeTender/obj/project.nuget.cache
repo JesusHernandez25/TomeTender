@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "B9OBSpx5a4AOe+Xep9ga8t79OblrxUYQ0IWNpwH9OaDZsUFsrKKGAJ9hGy35VCJXiRBD58gHh4z8ZhRQ8jBNqg==",
+  "dgSpecHash": "PUX7Fkzg5xJloiONvBcI1azJPSOYc3KTKoBls76NdGWw310hgIWAnooOcYlSOtRGHu9LJzKTZrf1KeTc2eadfg==",
   "success": true,
-  "projectFilePath": "E:\\Downloads\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
+  "projectFilePath": "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mists\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\mists\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\mists\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\mists\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\mists\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\zamos\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\zamos\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\zamos\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\zamos\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\zamos\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }

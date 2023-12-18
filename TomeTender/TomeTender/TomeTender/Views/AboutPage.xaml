@@ -45,6 +45,15 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+                
+                <!-- Delete this later -->
+                <Button Text = "Test Button"
+                    x:Name = "Button1"
+                    BackgroundColor = "#2196F3"
+                    TextColor = "WhiteSmoke"
+                    HeightRequest = "50" 
+                    Clicked="GoToBookAvailability"/>
+                
             </StackLayout>
         </ScrollView>
     </Grid>
