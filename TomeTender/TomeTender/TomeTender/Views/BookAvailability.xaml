@@ -13,10 +13,10 @@
                 HorizontalOptions="Start" VerticalOptions="Start"
                 WidthRequest="70" HeightRequest="50" Margin="10,10,0,0" />
 
-        <!-- Back Button 
+       
 
             <Label Text="Book Title" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0,20,0,20"/>
-        -->
+        
         <!-- Library 1 -->
         <Label Text="Library 1" FontSize="Subtitle"/>
         <ListView x:Name="Library1ListView" ItemSelected="OnItemSelected">
@@ -46,7 +46,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <!-- Back Button 
         <Button Text="Back" Clicked="OnBackClicked" />
+        -->
     </StackLayout>
 
 </ContentPage>
