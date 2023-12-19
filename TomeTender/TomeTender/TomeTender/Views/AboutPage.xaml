@@ -45,6 +45,14 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+
+                <Button Text = "Navigate To Second Page"
+                        x:Name = "Button1"
+                        BackgroundColor = "#2196F3"
+                        TextColor = "WhiteSmoke"
+                        HeightRequest = "50"
+                        Clicked="GoToBookAvailability"/>
+                
             </StackLayout>
         </ScrollView>
     </Grid>
