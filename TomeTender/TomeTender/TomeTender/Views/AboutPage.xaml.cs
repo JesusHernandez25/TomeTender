@@ -1,5 +1,4 @@
-﻿using BookAvailability;
-using System;
+﻿using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,7 +14,7 @@ namespace TomeTender.Views
 
         async void GoToBookAvailability(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new BookInfo());
         }
     }
 }
