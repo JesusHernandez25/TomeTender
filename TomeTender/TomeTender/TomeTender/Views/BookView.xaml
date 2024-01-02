@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TomeTender.Views.BookView">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <!-- Home Button -->
+                <Button Text="Home" Clicked="OnHomeClicked" 
+                HorizontalOptions="Start" VerticalOptions="Start"
+                Margin="0, 0, 165, 0" />
+
+                <!-- Back Button 
+                <Button Text="Back" Clicked="OnBackClicked" 
+                HorizontalOptions="End" VerticalOptions="Start"
+                Margin="50, 0, 0, 0"/>
+                -->
+            </StackLayout>
+            <!-- Image (Replace Later) -->
+            <Frame HeightRequest="300" WidthRequest="200" 
+                   BackgroundColor="White" 
+                   Padding="0"
+                   HasShadow="True" CornerRadius="10"
+                   HorizontalOptions="CenterAndExpand">
+
+                <Grid>
+                    <StackLayout BackgroundColor="Black">
+                        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg" 
+                           HeightRequest="350" Opacity="0.8"
+                           Aspect="AspectFill" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <!--Frames are to allow for more visual elements if needed-->
+            <!--Change to binding later-->
+
+            <Label Text="Title" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center" />
+            <Frame>
+                <Grid>
+                    <StackLayout Spacing="2" Orientation="Vertical">
+                        <Label Text="Genre" FontSize="20" VerticalOptions="Start" />
+                        <Label Text="Test" FontSize="15" VerticalOptions="Start"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <Frame>
+                <Grid>
+                    <StackLayout Spacing="2" Orientation="Vertical">
+                        <Label Text="Description" FontSize="20" />
+                        <Label Text="Test" FontSize="12"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <Frame>
+                <Grid>
+                    <StackLayout Spacing="2" Orientation="Vertical">
+                        <Label Text="Publisher: " FontSize="20" />
+                        <Label Text="Published Year: " FontSize="20" />
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
