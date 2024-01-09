@@ -285,26 +285,54 @@ CREATE ROLE Librarian;
 CREATE ROLE Administrator;
 CREATE ROLE AccountUser;
 
+GO
+
 -- Grant permissions to the Librarian role
-GRANT SELECT, INSERT, UPDATE, DELETE ON Books TO Librarian;
-GRANT SELECT, INSERT, UPDATE, DELETE ON AccountUsers TO Librarian;
-GRANT SELECT, INSERT, UPDATE ON Transactions TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Book TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Author TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON BookInfo TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Library_Event TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON UserAccount TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Book_Location TO Librarian;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Genre TO Librarian;
+GRANT SELECT, INSERT, UPDATE ON LoanedBook TO Librarian;
+
 
 -- Grant permissions to the Administrator role
-GRANT SELECT, INSERT, UPDATE, DELETE ON Books TO Administrator;
-GRANT SELECT, INSERT, UPDATE, DELETE ON Members TO Administrator;
-GRANT SELECT, INSERT, UPDATE, DELETE ON Transactions TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Book TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Author TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON Libraries TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON City TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON UserAccount TO Administrator;
+GRANT SELECT, INSERT, UPDATE, DELETE ON LoanedBook TO Administrator;
+
 
 -- Grant permissions to the AccountUser role
-GRANT SELECT ON Books TO AccountUser;
-GRANT SELECT ON Transactions TO LibraryUser;
+GRANT SELECT ON Book TO AccountUser;
+GRANT SELECT ON UserAccount TO AccountUser;
+GRANT SELECT ON LoanedBook TO AccountUser;
+-- Create Login
+Create Login Greg
+	WITH PASSWORD = '123'
+Create Login Destiny
+	WITH PASSWORD = '1234'
+Create Login Rodney
+	WITH PASSWORD = '12345'
+GO
+-- Create User
+Create User Greg FOR LOGIN Greg
+Create User Destiny FOR LOGIN Destiny
+Create User Rodney FOR LOGIN Rodney
+
+GO
 
 -- Optionally, grant additional permissions as needed
 
 -- Assign roles to users
 -- Replace 'username' with the actual usernames of your Librarian, Administrator, and AccountUser
-GRANT Librarian TO Gerg,Thomas;
-GRANT Administrator TO Destiny,Bannks;
-GRANT AccountUser TO Rodney,Stewart;
+ALTER ROLE Librarian ADD MEMBER Greg;
+ALTER ROLE Administrator ADD MEMBER Destiny;
+ALTER ROLE Accountuser ADD MEMBER Rodney;
+GO
 
 -- Add more roles to Assign Roles as needed
