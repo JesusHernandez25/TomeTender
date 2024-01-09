@@ -199,6 +199,20 @@ CREATE TABLE Book_Location (
 	Book_Amount INT
 );
 
+	--Insert Sample data into Book_Location table
+INSERT INTO Book_Location (info_id, library_ID)
+VALUES
+	('1','1'),
+	('1','2'),
+	('1','3'),
+	('2','1'),
+	('2','2'),
+	('2','3'),
+	('3','1'),
+	('3','2'),
+	('4','1'),
+	('5','3');
+
 	-- Create UserAccount table
 CREATE TABLE UserAccount (
     account_id INT PRIMARY KEY IDENTITY(1,1),
