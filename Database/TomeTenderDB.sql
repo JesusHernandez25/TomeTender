@@ -200,18 +200,23 @@ CREATE TABLE Book_Location (
 );
 
 	--Insert Sample data into Book_Location table
-INSERT INTO Book_Location (info_id, library_ID)
+INSERT INTO Book_Location (info_id, library_ID,Book_Amount)
 VALUES
-	('1','1'),
-	('1','2'),
-	('1','3'),
-	('2','1'),
-	('2','2'),
-	('2','3'),
-	('3','1'),
-	('3','2'),
-	('4','1'),
-	('5','3');
+	('1','1','3'),
+	('1','2','1'),
+	('1','3','0'),
+	('2','1','2'),
+	('2','2','3'),
+	('2','3','3'),
+	('3','1','2'),
+	('3','2','0'),
+	('3','3','0'),
+	('4','1','1'),
+	('4','2','3'),
+	('4','3','0'),
+	('5','1','1'),
+	('5','2','0'),
+	('5','3','2');
 
 	-- Create UserAccount table
 CREATE TABLE UserAccount (
