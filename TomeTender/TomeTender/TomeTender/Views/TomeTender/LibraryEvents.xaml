@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TomeTender.LibraryEvents">
+
+    <StackLayout>
+       
+
+        <ListView x:Name="LibraryEventsListView"
+                  ItemsSource="{Binding LibraryEvents}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Title}" FontAttributes="Bold" />
+                            <Label Text="{Binding Location}" />
+                            <Label Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy hh:mm tt}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
