@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TomeTender.Views.Book"
+             Title="Home">
+    <StackLayout>
+        <SearchBar Placeholder="Search Book" TextChanged="SearchBar_TextChanged"/>
+        <ListView x:Name="BookListView" SeparatorColor="Gray" ItemTapped="BookListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ImageUrl}"
+                                   HeightRequest="40"
+                                   WidthRequest="40" />
+                            <StackLayout>
+                                <Label Text="{Binding Name}"
+                                       FontSize="Medium"
+                                       TextColor="Black"
+                                       FontAttributes="Bold" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

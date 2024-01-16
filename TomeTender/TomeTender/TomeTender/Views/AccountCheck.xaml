@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TomeTender.Views.AccountCheck"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text = "Login"
+                        x:Name = "Button1"
+                        VerticalOptions="Center"
+                        BackgroundColor = "#2196F3"
+                        TextColor = "Black"
+                        HeightRequest = "50"
+                        Clicked="GoToLogin"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -639,3 +639,4 @@ C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender.Android\
 C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender.Android\obj\Debug\130\res\drawable\tometender.jpg
