@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TomeTender.LibraryListPage">
+    <StackLayout>
+       
+
+        <ListView x:Name="LibraryListView"
+              ItemsSource="{Binding LibraryList}"
+              CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding . }" Detail="789 Elm Street">
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+    </ListView>
+
+        <ListView x:Name="LibraryListView2"
+          ItemsSource="{Binding LibraryList}"
+          CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding . }" Detail="456 Oak Avenue" ></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+    </ListView>
+
+
+        <ListView x:Name="LibraryListView3"
+       ItemsSource="{Binding LibraryList}"
+       CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding . }" Detail="799 Maple Lane" ></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+
+        <ListView x:Name="LibraryListView4"
+       ItemsSource="{Binding LibraryList}"
+       CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding . }" Detail="321 Pine Street" ></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </StackLayout>
+    
+</ContentPage>

@@ -541,23 +541,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zamos\\.nuget\\packages\\": {},
+    "C:\\Users\\JP900\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
+      "projectUniqueName": "C:\\Users\\JP900\\Desktop\\JesusHernandez25\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
       "projectName": "TomeTender",
-      "projectPath": "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
-      "packagesPath": "C:\\Users\\zamos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zamos\\source\\repos\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\obj\\",
+      "projectPath": "C:\\Users\\JP900\\Desktop\\JesusHernandez25\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\TomeTender.csproj",
+      "packagesPath": "C:\\Users\\JP900\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JP900\\Desktop\\JesusHernandez25\\TomeTender\\TomeTender\\TomeTender\\TomeTender\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\zamos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JP900\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

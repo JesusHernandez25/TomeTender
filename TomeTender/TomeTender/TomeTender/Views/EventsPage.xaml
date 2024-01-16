@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TomeTender.EventsPage">
+    <StackLayout>
+
+
+    <ListView x:Name="EventListView"
+              ItemsSource="{Binding EventList}"
+              CachingStrategy="RecycleElement">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding . }" Detail="Events happening" ></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+    <ListView x:Name="EventListView2"
+          ItemsSource="{Binding EventList}"
+          CachingStrategy="RecycleElement">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <TextCell Text="{Binding . }" Detail="Events happening" ></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+
+
+    <ListView x:Name="EventListView3"
+       ItemsSource="{Binding EventList}"
+       CachingStrategy="RecycleElement">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <TextCell Text="{Binding . }" Detail="Events happening" ></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+    <ListView x:Name="EventListView4"
+       ItemsSource="{Binding EventList}"
+       CachingStrategy="RecycleElement">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <TextCell Text="{Binding . }" Detail="Events happening" ></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+    </StackLayout>
+
+</ContentPage>
