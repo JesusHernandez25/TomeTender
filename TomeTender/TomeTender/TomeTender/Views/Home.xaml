@@ -33,6 +33,20 @@
                         TextColor = "WhiteSmoke"
                         HeightRequest = "50"
                         Clicked="GoToBooks"/>
+                
+                <Button Text = "Library"
+                        x:Name = "Button2"
+                        BackgroundColor = "#2196F3"
+                        TextColor = "WhiteSmoke"
+                        HeightRequest = "50"
+                        Clicked="GoToLibrary"/>
+                
+                <Button Text = "View Events"
+                        x:Name = "Button3"
+                        BackgroundColor = "#2196F3"
+                        TextColor = "WhiteSmoke"
+                        HeightRequest = "50"
+                        Clicked="GoToEvent"/>
             </StackLayout>
         </ScrollView>
     </Grid>

@@ -21,5 +21,15 @@ namespace TomeTender.Views
         {
             await Navigation.PushAsync(new Book());
         }
+
+        async void GoToLibrary(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LibraryList());
+        }
+
+        async void GoToEvent(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Events());
+        }
     }
 }
