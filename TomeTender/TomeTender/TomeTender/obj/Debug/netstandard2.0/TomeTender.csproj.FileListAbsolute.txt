@@ -22,3 +22,5 @@ C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender\obj\Debu
 C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender\obj\Debug\netstandard2.0\Views\BookAvail.xaml.g.cs
 C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender\obj\Debug\netstandard2.0\Views\BookInfo.xaml.g.cs
 C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender\obj\Debug\netstandard2.0\Views\BookView.xaml.g.cs
+C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender\obj\Debug\netstandard2.0\Views\Book.xaml.g.cs
+C:\Users\zamos\source\repos\TomeTender\TomeTender\TomeTender\TomeTender\obj\Debug\netstandard2.0\Views\Home.xaml.g.cs

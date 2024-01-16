@@ -14,7 +14,7 @@ namespace TomeTender.Views
 
         async void GoToBookAvailability(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new BookInfo());
+            await Navigation.PushAsync(new Home());
         }
     }
 }
