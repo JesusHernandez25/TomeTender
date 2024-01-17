@@ -195,7 +195,6 @@ VALUES
 CREATE TABLE Book_Location (
     info_id INT FOREIGN KEY REFERENCES BookInfo(info_id),
     library_ID INT FOREIGN KEY REFERENCES Libraries(Library_ID),
-    Book_Amount INT,
     PRIMARY KEY (info_ID, Library_ID),
 	Book_Amount INT
 );
